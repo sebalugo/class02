@@ -36,3 +36,28 @@ class Team
   # output team name + players list.
   end
 end
+
+
+describe Team do
+
+  describe "#initialize" do
+
+  end
+
+  describe "#add_player" do
+
+  end
+
+  describe "#remove_player" do
+
+  end
+
+  describe "filter_by_position" do
+  
+  end
+
+  describe "to_s"
+
+  end
+
+end 
