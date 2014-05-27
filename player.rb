@@ -4,14 +4,14 @@ attr_reader :name,:position
 
 def initialize name,position
 
-@a = a
-@b = b
+@a = name
+@b = position
 
 end	
 
 def print_player 
 
-puts @a , @b
+puts @a @b
 
 end
 
