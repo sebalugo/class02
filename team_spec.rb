@@ -32,6 +32,7 @@ class Team
   end
 
   def to_s
+  team.each{|a_player| a_player.print_player}
   # output team name + players list.
   end
 end
