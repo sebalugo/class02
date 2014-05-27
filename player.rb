@@ -1,17 +1,17 @@
 class Player
 
-attr_reader :name,:position
+attr_accessor :name,:position
 
 def initialize name,position
 
-@a = name
-@b = position
+@name = name
+@position = position
 
 end	
 
 def print_player 
 
-puts @a+" "+@b
+puts @name+" "+@position
 
 end
 
