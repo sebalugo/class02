@@ -5,16 +5,16 @@ class Team
   def initialize (team_name) 
 
   @team_name = team_name
-  team = {}  
-
+  team = []
   end
 
   def add_player(name, position)
-   team[name] = position  
+   Player player = Player.new name,postion
+   team.push(player)
   end
 
   def remove_player(name)
-   team.delete_if { |key,value| key == name}
+    team.delete_if {|a_name| a_name == name} 
   end
 
   def filter_by_position(position)
@@ -22,6 +22,6 @@ class Team
   end
 
   def to_s
-   # output team name + players list.
+ # output team name + players list.
   end
 end
