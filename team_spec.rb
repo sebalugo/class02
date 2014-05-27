@@ -1,9 +1,9 @@
-require "player.rb"
+require_relative "./player.rb"
 require "spec_helper.rb"
 
 class Team
   
-  attr_reader :team_name
+  attr_accessor :team_name,:team
 
   def initialize (team_name) 
 
@@ -21,12 +21,17 @@ class Team
   end
 
   def filter_by_position(position)
+    array = []
+    team.each {|a_player|
+    if a_player.position == position
+      array.push(a_player)
+    end
+    }
+   array
     # returns players in the given position
   end
 
   def to_s
- 
   # output team name + players list.
   end
-
 end
