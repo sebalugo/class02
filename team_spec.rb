@@ -14,6 +14,7 @@ class Team
   end
 
   def remove_player(name)
+   team.delete_if { |key,value| key == name}
   end
 
   def filter_by_position(position)
