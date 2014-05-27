@@ -1,6 +1,14 @@
-require "spec_helper.rb"
-
 class Team
+  
+  attr_reader :team_name
+
+  def initialize (team_name) 
+
+  @team_name = team_name
+  team = {}  
+
+  end
+
   def add_player(name, position)
   end
 
