@@ -11,7 +11,7 @@ end
 
 def print_player 
 
-puts[@a,@b]
+puts @a , @b
 
 end
 
