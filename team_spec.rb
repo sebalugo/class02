@@ -101,6 +101,7 @@ end
       expect(team.team.any? { |ply| ply.name == 'Elias' && ply.position == 'Saltador' }).to eql false
       end
     end
+
   context 'player is not in the team' do
     it 'should not change the team at all' do
     team = Team.new 'Equipo de Prueba'
@@ -108,7 +109,8 @@ end
     team.remove_player('Nelson','Programador')
     expect(team.team.size).to eql(1) 
     end
-  end
+  end 
+
 end
 
   describe 'filter_by_position' do
