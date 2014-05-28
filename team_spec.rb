@@ -64,6 +64,18 @@ describe Team do
 
   describe "#add_player" do
 
+    context "player is already in the team" do
+      it "should raise an error" do
+     
+      end
+    end
+
+    context "player is not in the team" do
+       it "should add the player to the team" do
+
+       end
+    end    
+
   end
 
   describe "#remove_player" do
