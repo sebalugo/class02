@@ -11,7 +11,7 @@ end
 
 def print_player 
 
-puts @name+" "+@position
+ @name+" "+@position
 
 end
 
