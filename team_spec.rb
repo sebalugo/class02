@@ -74,10 +74,22 @@ describe Player do
   end
   
   describe "#name" do
-    
+   
+    it "should return the name of the player" do
+    player = Player.new "Gabriel","Pitcher"
+    expect(player.name).to eql("Gabriel")
+    end
+  
   end
 
   describe "#position" do
+    
+    it "should return the position of the player" do
+    
+    player = Player.new "Fernando" ,"Defensa"
+    expect(player.position).to eql("Defensa")    
+
+    end   
 
   end
   
