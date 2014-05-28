@@ -28,8 +28,8 @@ class Team
    @team.push(player)
   end
 
-  def remove_player(name)
-    @team.delete_if { |a_player| a_player.name == name} 
+  def remove_player(name,position)
+    @team.delete_if { |a_player| a_player.name == name && a_player.position == position} 
   end
 
   def filter_by_position(position)
