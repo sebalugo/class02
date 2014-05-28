@@ -65,11 +65,11 @@ end
 describe Player do
 
   describe "#initialize" do   
-    
+    it "should create a new player with given name and position" 
   end
   
   describe "#print_player" do
-    it "should print a player's name and position" do
+    it "should return a player's name and position" do
       player = Player.new "Seba","Delantero"     
       str = player.print_player
       expect(str).to eql "Seba Delantero"
