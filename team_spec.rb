@@ -92,7 +92,8 @@ describe Team do
 end
 
   describe '#remove_player' do
-
+  
+  context 'player is in the team' do
     it 'should remove the given player from the team' do
       team = Team.new 'Los Hermanos'
       team.add_player('Gilberto', 'Pitcher')
@@ -100,8 +101,17 @@ end
       team.add_player('Elias', 'Saltador')
       team.remove_player('Elias', 'Saltador')
       expect(team.team.any? { |ply| ply.name == 'Elias' && ply.position == 'Saltador' }).to eql false
+      end
+    end
+  context 'player is not in the team' do
+    it 'should not change the team at all' do
+    team = Team.new 'Equipo de Prueba'
+    team.add_player('Jeffrey','Programador')
+    team.remove_player('Nelson','Programador')
+    expect(team.team.size).to eql(1) 
     end
   end
+end
 
   describe 'filter_by_position' do
     it 'should return an array with all the players with the given position' do
