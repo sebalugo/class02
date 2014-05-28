@@ -14,8 +14,17 @@ class Team
   @team = []
   end
 
-  def add_player(name,position)
-   player = Player.new name,position
+  def add_player(name,position) 
+  
+  element = name+" "+position
+  team.each{|player| 
+
+  if player.print_player == element 
+  raise PlayerError
+  end
+ 
+  } 
+   player = Player.new name,position 
    @team.push(player)
   end
 
@@ -35,7 +44,7 @@ class Team
   end
 
   def to_s
-  team.each{|a_player| a_player.print_player}
+  team.each{|a_player| puts a_player.print_player}
   # output team name + players list.
   end
 end
@@ -66,7 +75,6 @@ describe Team do
 
     context "player is already in the team" do
       it "should raise an error" do
-     
       end
     end
 
