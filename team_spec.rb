@@ -154,7 +154,6 @@ describe Player do
 
   describe "#initialize" do   
   end
- end 
   describe "#name" do
    
     it "should return the name of the player" do
@@ -183,10 +182,5 @@ describe Player do
     end
   end
 
-end
-require_relative "./player.rb"
-require "spec_helper.rb"
-
-class PlayerError < RuntimeError
 end
 
