@@ -42,9 +42,13 @@ class Team
    array
     # returns players in the given position
   end
+  
+  def print_team 
 
-  def to_s
-  team.each{|a_player| puts a_player.print_player}
+  end
+  
+  def to_s(player)
+  player.name+" "+player.position  
   # output team name + players list.
   end
 end
