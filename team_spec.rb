@@ -83,7 +83,10 @@ describe Team do
 
     context "player is not in the team" do
        it "should add the player to the team" do
-
+         team = Team.new "Python"
+         team.add_player("Daniel","Portero")
+         team.add_player("Tur","Defensa")
+         expect( team.team.any?{|ply| ply.name == "Daniel" && ply.position == "Portero"} ).to eql true
        end
     end    
 
