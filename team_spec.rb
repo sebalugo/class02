@@ -56,8 +56,8 @@ describe Team do
   
   end
 
-  describe "to_s"
+  describe "to_s" do
 
   end
 
-end 
+end
