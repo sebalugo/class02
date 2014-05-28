@@ -152,7 +152,15 @@ end
 
 describe Player do
 
-  describe "#initialize" do   
+  describe "#initialize" do
+  
+  it "should create a new player with a name and position" do
+    player = Player.new "Jose","Portero"
+    expect(player).to be_kind_of(Player)
+    expect(player).to respond_to(:name)
+    expect(player).to respond_to(:position)
+    end    
+   
   end
   describe "#name" do
    
