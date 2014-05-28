@@ -69,11 +69,9 @@ describe Team do
       team.team_name = 'Real Madrid'
       expect(team.team_name).to eql('Real Madrid')
     end
-
   end
 
   describe '#add_player' do
-
     context 'player is already in the team' do
       it 'should raise an error' do
         team = Team.new 'El equipo'
@@ -91,28 +89,22 @@ describe Team do
       end
     end
 
-  end
+end
 
   describe '#remove_player' do
 
     it 'should remove the given player from the team' do
-
       team = Team.new 'Los Hermanos'
       team.add_player('Gilberto', 'Pitcher')
       team.add_player('Rigoberto', 'Jugador')
       team.add_player('Elias', 'Saltador')
-
       team.remove_player('Elias', 'Saltador')
       expect(team.team.any? { |ply| ply.name == 'Elias' && ply.position == 'Saltador' }).to eql false
-
     end
-
   end
 
   describe 'filter_by_position' do
-
     it 'should return an array with all the players with the given position' do
-
       team = Team.new 'El equipito'
       team.add_player('Juan', 'Delantero')
       team.add_player('Juan', 'Defensa')
@@ -125,19 +117,14 @@ describe Team do
       players_array.each { |p| array.push(p.print_player) }
       flag = true
       team.team.each{|p|
-
         if p.position == position
-
           unless array.include?(p.print_player)
             flag = false
           end
-
         end
-
       }
       expect(flag).to eql true
     end
-
   end
 
   describe 'to_s' do
@@ -153,33 +140,26 @@ end
 describe Player do
 
   describe '#initialize' do
-
     it 'should create a new player with a name and position' do
         player = Player.new 'Jose', 'Portero'
         expect(player).to be_kind_of(Player)
         expect(player).to respond_to(:name)
         expect(player).to respond_to(:position)
       end
-
   end
-  describe '#name' do
 
+  describe '#name' do
     it 'should return the name of the player' do
       player = Player.new 'Gabriel', 'Pitcher'
       expect(player.name).to eql('Gabriel')
     end
-
   end
 
   describe '#position' do
-
     it 'should return the position of the player' do
-
       player = Player.new 'Fernando' , 'Defensa'
       expect(player.position).to eql('Defensa')
-
     end
-
   end
 
   describe '#print_player' do
