@@ -65,7 +65,12 @@ end
 describe Player do
 
   describe "#initialize" do   
-    it "should create a new player with given name and position" 
+    it "should create a new player with a name and position" do
+    player = Player.new "Jose","Portero"
+    expect(player).to be_kind_of(Player)
+    expect(player).to respond_to(:name)
+    expect(player).to respond_to(:position)
+    end    
   end
   
   describe "#print_player" do
@@ -74,7 +79,6 @@ describe Player do
       str = player.print_player
       expect(str).to eql "Seba Delantero"
     end
-
   end
 
 end
