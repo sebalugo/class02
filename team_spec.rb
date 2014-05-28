@@ -61,3 +61,16 @@ describe Team do
   end
 
 end
+
+describe Player do
+
+  describe "#initialize" do
+ 
+  end
+  
+  describe "#print_player" do
+
+  end
+
+
+end
