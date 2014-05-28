@@ -1,6 +1,9 @@
 require_relative "./player.rb"
 require "spec_helper.rb"
 
+class PlayerError < RuntimeError
+end
+
 class Team
   
   attr_accessor :team_name,:team
