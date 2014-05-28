@@ -44,11 +44,11 @@ class Team
   end
   
   def print_team 
-
+    @team.each{|p| puts p.to_s}
   end
   
   def to_s(player)
-  player.name+" "+player.position  
+  player.print_player 
   # output team name + players list.
   end
 end
@@ -81,6 +81,9 @@ describe Team do
       it "should raise an error" do
         team = Team.new "El equipo"     
         team.add_player("Humberto","Medio")
+        player = Player.new "HH","LL"
+        ss = player.to_s
+        puts ss
         expect{team.add_player("Humberto","Medio")}.to raise_error PlayerError
       end
     end
@@ -122,7 +125,7 @@ describe Team do
   team.add_player("Juan Fernando","Delantero")
   team.add_player("Jose","Defensa")
   team.add_player("Rafael","Delantero")
-
+  team.print_team
   position = "Delantero"
   players_array = team.filter_by_position(position)
   array = []
@@ -153,12 +156,6 @@ end
 describe Player do
 
   describe "#initialize" do   
-    it "should create a new player with a name and position" do
-    player = Player.new "Jose","Portero"
-    expect(player).to be_kind_of(Player)
-    expect(player).to respond_to(:name)
-    expect(player).to respond_to(:position)
-    end    
   end
   
   describe "#name" do
@@ -190,3 +187,9 @@ describe Player do
   end
 
 end
+require_relative "./player.rb"
+require "spec_helper.rb"
+
+class PlayerError < RuntimeError
+end
+
