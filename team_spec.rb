@@ -44,7 +44,12 @@ end
 describe Team do
 
   describe "#initialize" do
-
+    it "should create a new team with a team  name and an empty team" do
+    team = Team.new "Ruby"
+    expect(team).to be_kind_of(Team)
+    expect(team).to respond_to(:team_name)
+    expect(team).to respond_to(:team)
+    end
   end
 
   describe "#add_player" do
