@@ -37,7 +37,6 @@ class Team
       end
     }
     array
-    # returns players in the given position
   end
 
   def print_team
@@ -47,7 +46,6 @@ class Team
 
   def to_s(player)
     player.print_player
-    # output team name + players list.
   end
 end
 
