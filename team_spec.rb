@@ -43,7 +43,8 @@ class Team
     # returns players in the given position
   end
   
-  def print_team 
+  def print_team
+    puts @team_name 
     @team.each{|p| puts p.to_s}
   end
   
@@ -144,7 +145,11 @@ describe Team do
   end
 
   describe "to_s" do
-
+    it "should return given plaver's name and position" do
+      team = Team.new "Equipo Rojo"
+      player = Player.new "Cris","Atacante"
+      expect(team.to_s(player)).to eql("Cris Atacante")  
+    end
   end
 
 end
