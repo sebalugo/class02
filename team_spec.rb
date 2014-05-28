@@ -82,8 +82,6 @@ describe Team do
         team = Team.new "El equipo"     
         team.add_player("Humberto","Medio")
         player = Player.new "HH","LL"
-        ss = player.to_s
-        puts ss
         expect{team.add_player("Humberto","Medio")}.to raise_error PlayerError
       end
     end
@@ -125,7 +123,6 @@ describe Team do
   team.add_player("Juan Fernando","Delantero")
   team.add_player("Jose","Defensa")
   team.add_player("Rafael","Delantero")
-  team.print_team
   position = "Delantero"
   players_array = team.filter_by_position(position)
   array = []
@@ -157,7 +154,7 @@ describe Player do
 
   describe "#initialize" do   
   end
-  
+ end 
   describe "#name" do
    
     it "should return the name of the player" do
