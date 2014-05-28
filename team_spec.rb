@@ -52,6 +52,10 @@ describe Team do
     end
   end
 
+  describe "#team_name" do
+
+  end
+
   describe "#add_player" do
 
   end
