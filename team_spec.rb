@@ -81,7 +81,6 @@ describe Team do
       it "should raise an error" do
         team = Team.new "El equipo"     
         team.add_player("Humberto","Medio")
-        player = Player.new "HH","LL"
         expect{team.add_player("Humberto","Medio")}.to raise_error PlayerError
       end
     end
