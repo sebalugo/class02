@@ -113,7 +113,7 @@ end
 
 end
 
-  describe 'filter_by_position' do
+  describe '#filter_by_position' do
     it 'should return an array with all the players with the given position' do
       team = Team.new 'El equipito'
       team.add_player('Juan', 'Delantero')
@@ -137,7 +137,7 @@ end
     end
   end
 
-  describe 'to_s' do
+  describe '#to_s' do
     it "should return given plaver's name and position" do
       team = Team.new 'Equipo Rojo'
       player = Player.new 'Cris', 'Atacante'
