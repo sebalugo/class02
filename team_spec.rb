@@ -110,6 +110,34 @@ describe Team do
 
   describe "filter_by_position" do
   
+  it "should return an array with all the players with the given position" do
+  
+  team = Team.new "El equipito"
+  team.add_player("Juan","Delantero")
+  team.add_player("Juan","Defensa")
+  team.add_player("Juan Fernando","Delantero")
+  team.add_player("Jose","Defensa")
+  team.add_player("Rafael","Delantero")
+
+  position = "Delantero"
+  players_array = team.filter_by_position(position)
+  array = []
+  players_array.each{|p| array.push(p.print_player)} 
+  flag = true
+  team.team.each{|p|   
+  
+  if p.position == position
+  
+  if !array.include?(p.print_player) 
+    flag = false
+  end  
+
+  end 
+
+  }
+  expect(flag).to eql true
+  end
+
   end
 
   describe "to_s" do
