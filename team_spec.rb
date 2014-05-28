@@ -73,6 +73,14 @@ describe Player do
     end    
   end
   
+  describe "#name" do
+    
+  end
+
+  describe "#position" do
+
+  end
+  
   describe "#print_player" do
     it "should return a player's name and position" do
       player = Player.new "Seba","Delantero"     
