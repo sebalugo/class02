@@ -75,6 +75,9 @@ describe Team do
 
     context "player is already in the team" do
       it "should raise an error" do
+        team = Team.new "El equipo"     
+        team.add_player("Humberto","Medio")
+        expect{team.add_player("Humberto","Medio")}.to raise_error PlayerError
       end
     end
 
