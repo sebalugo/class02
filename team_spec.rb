@@ -53,6 +53,12 @@ describe Team do
   end
 
   describe "#team_name" do
+    it "should return the name of the team and also be able to change it" do
+      team = Team.new "Devs"
+      expect(team.team_name).to eql("Devs")
+      team.team_name = "Real Madrid"
+      expect(team.team_name).to eql("Real Madrid")
+    end
 
   end
 
