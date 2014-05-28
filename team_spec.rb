@@ -64,13 +64,17 @@ end
 
 describe Player do
 
-  describe "#initialize" do
- 
+  describe "#initialize" do   
+    
   end
   
   describe "#print_player" do
+    it "should print a player's name and position" do
+      player = Player.new "Seba","Delantero"     
+      str = player.print_player
+      expect(str).to eql "Seba Delantero"
+    end
 
   end
-
 
 end
